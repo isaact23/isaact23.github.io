@@ -11,8 +11,8 @@ import { HomeCardComponent } from './home-card/home-card.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  cards: HomeCard[] = [
-    {
+  cardRows: HomeCard[][] = [
+    [{
       h1: "Isaac Thompson",
       h2: "isaact.net",
       p: "Welcome! Feel free to browse my projects and websites.",
@@ -38,8 +38,8 @@ export class HomeComponent {
       imgSrc: "assets/img/gba-helper.png",
       imgAlt: "Icon for GBA Helper, which is an app to help make games for the Game Boy Advance",
       pixelated: true
-    },
-    {
+    }],
+    [{
       h1: "Cavemen",
       p: "An underground horror game",
       a: "https://shufflesninja.itch.io/cavemen",
@@ -65,6 +65,6 @@ export class HomeComponent {
       a: "https://gaming-project-at-vt.itch.io/cats-vs-rats",
       imgSrc: "assets/img/catsvsrats.png",
       imgAlt: "Tower defense game with cats and rats"
-    }
+    }]
   ];
 }

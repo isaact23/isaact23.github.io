@@ -1,6 +1,8 @@
-<div *ngIf="card !== undefined" class="w3-card-4 w3-padding-large w3-center">
+<div *ngIf="card !== undefined" class="w3-card-4 w3-center w3-theme-d2" style="height: 100%;">
   <img src={{card.imgSrc}} alt={{card.imgAlt}} [style]="style" />
-  <h1>{{card.h1}}</h1>
-  <h2>{{card.h2}}</h2>
-  <p>{{card.p}}</p>
+  <div class="w3-padding">
+    <h1>{{card.h1}}</h1>
+    <h2>{{card.h2}}</h2>
+    <p>{{card.p}}</p>
+  </div>
 </div>
