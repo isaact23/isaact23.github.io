@@ -10,14 +10,19 @@
                 <!-- Only use the a element if the card has a link.
                         Maybe there is a better way to do this.        -->
                 <div class="w3-margin" style="height: 100%;">
-                    <div *ngIf="card.a === undefined; else doLink">
+                    <div *ngIf="card.a === undefined && card.route === undefined;">
                         <app-home-card [card]="card" />
                     </div>
-                    <ng-template #doLink>
-                        <a href="{{card.a}}" target="_blank" rel="noopener">
+                    <div *ngIf="card.a !== undefined && card.route === undefined">
+                        <a [href]="card.a" target="_blank" rel="noopener">
                             <app-home-card [card]="card" />
                         </a>
-                    </ng-template>
+                    </div>
+                    <div *ngIf="card.a === undefined && card.route !== undefined">
+                        <a routerLink="/custom-led">
+                            <app-home-card [card]="card" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
