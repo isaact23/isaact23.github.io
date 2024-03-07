@@ -1,9 +1,10 @@
 
 export interface HomeCard {
-  imgSrc: string;
-  imgAlt: string,
   h1?: string,
   h2?: string,
   p?: string,
-  a?: string
+  a?: string,
+  imgSrc: string;
+  imgAlt: string,
+  pixelated?: boolean;
 }
