@@ -1,20 +1,27 @@
-<div class="w3-col m4 l3">
-    <div *ngFor="let card of cards" class="w3-card-4 w3-margin w3-padding-large w3-center w3-round-large">
-        <img src={{card.imgSrc}} alt={{card.imgAlt}} style="width:100%" />
-        <h1>{{card?.h1}}</h1>
-        <h2>{{card?.h2}}</h2>
-        <p>{{card?.p}}</p>
+
+<div class="w3-container">
+    <div class="w3-row">
+        <div
+            *ngFor="let card of cards"
+            class="w3-quarter"
+            style="float:left"
+        >
+            <!-- Only use the a element if the card has a link.
+                 Maybe there is a better way to do this.        -->
+            <div class="w3-margin">
+                <div *ngIf="card.a === undefined; else doLink">
+                    <app-home-card [card]="card" />
+                </div>
+                <ng-template #doLink>
+                    <a href="{{card.a}}" target="_blank" rel="noopener">
+                        <app-home-card [card]="card" />
+                    </a>
+                </ng-template>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="w3-col m4 l3">
-  <div class="w3-card-4 w3-margin w3-padding-large w3-center w3-round-large">
-      <img src="assets/img/isaac.jpg" alt="Isaac Thompson" style="width:100%" />
-      <h1>Isaac Thompson</h1>
-      <h2>isaact.net</h2>
-      <p>Welcome! Feel free to browse my projects and websites.</p>
-  </div>
-</div>
 <div class="w3-col m4 l3">
   <a href="https://isaact.net/custom-led" target="_blank" rel="noopener">
       <div class="w3-card-4 w3-margin w3-padding-large w3-center w3-round-large">

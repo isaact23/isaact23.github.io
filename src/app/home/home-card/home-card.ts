@@ -4,5 +4,6 @@ export interface HomeCard {
   imgAlt: string,
   h1?: string,
   h2?: string,
-  p?: string
+  p?: string,
+  a?: string
 }
