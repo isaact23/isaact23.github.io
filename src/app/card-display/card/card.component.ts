@@ -1,19 +1,19 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { HomeCard } from './home-card';
+import { Card } from './card';
 import { NgIf } from '@angular/common';
 
 const DEFAULT_STYLE = "width: 100%;";
 
 @Component({
-  selector: 'app-home-card',
+  selector: 'app-card',
   standalone: true,
   imports: [NgIf],
-  templateUrl: './home-card.component.html',
-  styleUrl: './home-card.component.css'
+  templateUrl: './card.component.html',
+  styleUrl: './card.component.css'
 })
-export class HomeCardComponent implements OnChanges {
+export class CardComponent implements OnChanges {
 
-  @Input() card: HomeCard | undefined;
+  @Input() card: Card | undefined;
   style = DEFAULT_STYLE;
 
   ngOnChanges(): void {
