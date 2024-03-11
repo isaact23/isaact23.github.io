@@ -1,11 +1,5 @@
 <div class="w3-bar w3-theme-d4">
-    <a routerLink="/" class="w3-bar-item w3-button w3-left">
-        Home
-    </a>
-    <a routerLink="/portfolio" class="w3-bar-item w3-button w3-left">
-        Portfolio
-    </a>
-    <a class="w3-bar-item w3-right">
-        isaact.net
-    </a>
+    @for (btn of btns; track btn) {
+        <a routerLink={{btn.route}} class="w3-bar-item w3-button w3-left">{{btn.p}}</a>
+    }
 </div>
