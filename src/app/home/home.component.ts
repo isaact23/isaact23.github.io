@@ -28,6 +28,12 @@ export class HomeComponent {
       imgAlt: "Snippet of marching band music"
     },
     {
+      h1: "Join SONUS today!",
+      a: "https://sonusbrasstheater.org/",
+      imgSrc: "assets/img/sonus.png",
+      imgAlt: "SONUS Brass Theater logo"
+    },
+    {
       h1: "Isaac's Portfolio",
       p: "Click to see projects",
       route: "/portfolio",
