@@ -1,4 +1,3 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Card } from './card/card';
 import { CardComponent } from './card/card.component';
@@ -7,7 +6,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-card-display',
   standalone: true,
-  imports: [NgFor, NgIf, CardComponent, RouterModule],
+  imports: [CardComponent, RouterModule],
   templateUrl: './card-display.component.html',
   styleUrl: './card-display.component.css'
 })

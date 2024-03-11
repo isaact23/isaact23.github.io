@@ -1,28 +1,30 @@
-
-  <div class="w3-row">
-      <div *ngFor="let row of cardRows" class="w3-row">
-          <div
-              *ngFor="let card of row"
-              class="w3-col m4 l3"
-              style="float:left; height: 100%;"
-          >
-              <!-- Only use the a element if the card has a link.
-                      Maybe there is a better way to do this.        -->
-              <div class="w3-margin" style="height: 100%;">
-                  <div *ngIf="card.a === undefined && card.route === undefined;">
-                      <app-card [card]="card" />
-                  </div>
-                  <div *ngIf="card.a !== undefined && card.route === undefined">
-                      <a [href]="card.a" target="_blank" rel="noopener">
-                          <app-card [card]="card" />
-                      </a>
-                  </div>
-                  <div *ngIf="card.a === undefined && card.route !== undefined">
-                      <a routerLink={{card.route}}>
-                          <app-card [card]="card" />
-                      </a>
-                  </div>
-              </div>
+<div class="w3-row">
+  @for (row of cardRows; track row) {
+    <div class="w3-row">
+      @for (card of row; track card) {
+        <div
+          class="w3-col m4 l3"
+          style="float: left; height: 100%"
+        >
+          <div class="w3-margin" style="height: 100%">
+            @if (card.a === undefined) {
+              @if (card.route === undefined) {
+                <app-card [card]="card" />
+              }
+              @else {
+                <a routerLink="{{ card.route }}">
+                  <app-card [card]="card" />
+                </a>
+              }
+            }
+            @else if (card.route === undefined) {
+              <a [href]="card.a" target="_blank" rel="noopener">
+                <app-card [card]="card" />
+              </a>
+            }
           </div>
-      </div>
-  </div>
+        </div>
+      }
+    </div>
+  }
+</div>
