@@ -1,0 +1,12 @@
+
+.custom-led {
+  height: 100vh;
+}
+
+a {
+  font-size: 40px;
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
