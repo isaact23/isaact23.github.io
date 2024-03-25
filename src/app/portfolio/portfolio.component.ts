@@ -14,6 +14,7 @@ export class PortfolioComponent {
     [{
       h1: "Isaac Thompson",
       h2: "isaact.net",
+      p: "Many of these projects are team-projects. Click the icons for more info on the contributors!",
       imgSrc: "assets/img/isaac.jpg",
       imgAlt: "Picture of Isaac Thompson"
     },
