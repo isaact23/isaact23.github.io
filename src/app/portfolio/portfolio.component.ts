@@ -18,6 +18,13 @@ export class PortfolioComponent {
       imgAlt: "Picture of Isaac Thompson"
     },
     {
+      h1: "Fränkentrumpet",
+      p: "A proof-of-concept for music accesibility",
+      a: "https://devpost.com/software/frankentrumpet",
+      imgSrc: "assets/img/trumpet.jpg",
+      imgAlt: "A trumpet with motors attached to control the valves"
+    },
+    {
       h1: "its-a-me",
       p: "A Halloween Mario game",
       a: "https://github.com/isaact23/its-a-me",
@@ -29,15 +36,15 @@ export class PortfolioComponent {
       imgSrc: "assets/img/gba-helper.png",
       imgAlt: "Icon for GBA Helper, which is an app to help make games for the Game Boy Advance",
       pixelated: true
-    },
-    {
+    }],
+    [{
       h1: "Cavemen",
       p: "An underground horror game",
       a: "https://shufflesninja.itch.io/cavemen",
       imgSrc: "assets/img/cavemen.png",
       imgAlt: "A gloomy underground cave"
-    }],
-    [{
+    },
+    {
       h1: "squidgame",
       p: "A real-life version of Glass Stepping Stones",
       a: "https://github.com/isaact23/squidgame",
