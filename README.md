@@ -8,4 +8,4 @@ Change home page into a 'hub'
   MB Arrangements
   Green & Gold / Ravensquest
 
-Test
+ng deploy --base-href=/<repositoryname>/
